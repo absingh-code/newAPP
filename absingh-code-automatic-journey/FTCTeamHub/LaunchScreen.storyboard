@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  LaunchScreen.storyboard
+  FTCTeamHub
+
+  Branded splash, take 2: navy background, a large circular SF Symbol
+  (gearshape.circle.fill — circular by design, so no cornerRadius hack
+  needed), team name, tagline, and a thin accent bar.
+
+  IMPORTANT: launch screen storyboards cannot contain
+  userDefinedRuntimeAttributes (no runtime code is allowed to execute
+  before the app finishes launching) — that's what broke the previous
+  version. Every visual effect here is achieved with plain, static
+  Interface Builder attributes only.
+
+  NOTE: iOS caches the launch screen snapshot per-install. If you rebuild
+  and don't see this, fully delete the app from the simulator/device
+  first, then reinstall.
+-->
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23507"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" image="gearshape.circle.fill" catalog="system" id="badge-icon">
+                                <rect key="frame" x="156.5" y="330" width="80" height="80"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="icon-w"/>
+                                    <constraint firstAttribute="height" constant="80" id="icon-h"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FTC TEAM HUB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-title">
+                                <rect key="frame" x="46.5" y="426" width="300" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAM MANAGEMENT &amp; COLLABORATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbl-subtitle">
+                                <rect key="frame" x="46.5" y="464" width="300" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                <color key="textColor" red="0.62" green="0.72" blue="0.88" alpha="0.85" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="accent-bar">
+                                <rect key="frame" x="166.5" y="498" width="60" height="3"/>
+                                <color key="backgroundColor" red="0.30" green="0.58" blue="0.95" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="accent-w"/>
+                                    <constraint firstAttribute="height" constant="3" id="accent-h"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.04705882353" green="0.09019607843" blue="0.1882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="badge-icon" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="c-badge-x"/>
+                            <constraint firstItem="badge-icon" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-90" id="c-badge-y"/>
+                            <constraint firstItem="lbl-title" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="c-title-x"/>
+                            <constraint firstItem="lbl-title" firstAttribute="top" secondItem="badge-icon" secondAttribute="bottom" constant="16" id="c-title-y"/>
+                            <constraint firstItem="lbl-subtitle" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="c-sub-x"/>
+                            <constraint firstItem="lbl-subtitle" firstAttribute="top" secondItem="lbl-title" secondAttribute="bottom" constant="4" id="c-sub-y"/>
+                            <constraint firstItem="accent-bar" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="c-accent-x"/>
+                            <constraint firstItem="accent-bar" firstAttribute="top" secondItem="lbl-subtitle" secondAttribute="bottom" constant="18" id="c-accent-y"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+</document>
